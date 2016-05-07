@@ -9,39 +9,46 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
 // http://api.wunderground.com/api/6483a01fa60b1b42/forecast/lang:FR/q/zmw:00000.37.07156.json
 // http://api.wunderground.com/api/6483a01fa60b1b42/conditions/lang:FR/q/zmw:00000.37.07156.json
 
-class RNApp extends Component {
-  constructor(props) {
-    super(props);
+import ConditionsNow from './app/ConditionsNow.js';
 
+class RNApp extends Component {
+  constructor() {
+    super();
     this.state = {
-      data: {},
+      city: '',
+      condition: '',
+      temp: '',
     };
+    console.log('constructor');
   }
   componentWillMount() {
-    this.setState({
-      data: require('./data/conditions-paris.json'),
-    });
+    console.log('will mount');
+
+    setTimeout(() => {
+      console.log('after 1000 ms');
+      this.setState({
+        city: 'Paris',
+        condition: 'Ensoleillé',
+        temp: '25°',
+      });
+    }, 1000);
   }
   render() {
-    console.log(this.state.data);
+    console.log('render');
+
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <ConditionsNow
+          city={this.state.city}
+          condition={this.state.condition}
+          temp={this.state.temp}
+        />
       </View>
     );
   }
@@ -50,19 +57,6 @@ class RNApp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 
