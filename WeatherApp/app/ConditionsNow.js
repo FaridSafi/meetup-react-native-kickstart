@@ -21,7 +21,6 @@ class ConditionsNow extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#008FC2',
     alignItems: 'center',
     justifyContent: 'center',
     height: 300,
