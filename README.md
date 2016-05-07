@@ -9,7 +9,8 @@
 - React Native
 - XCode
 - Watchman
-- Atom ?
+- Atom & ESLint
+- Packager
 
 ## React-Native default project
 

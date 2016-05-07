@@ -12,8 +12,24 @@ import {
   View
 } from 'react-native';
 
+// http://api.wunderground.com/api/6483a01fa60b1b42/forecast/lang:FR/q/zmw:00000.37.07156.json
+// http://api.wunderground.com/api/6483a01fa60b1b42/conditions/lang:FR/q/zmw:00000.37.07156.json
+
 class RNApp extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: {},
+    };
+  }
+  componentWillMount() {
+    this.setState({
+      data: require('./data/conditions-paris.json'),
+    });
+  }
   render() {
+    console.log(this.state.data);
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
