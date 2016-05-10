@@ -1,0 +1,47 @@
+{
+  "response": {
+    "version": "0.1",
+    "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+    "features": {
+      "forecast": 1
+    }
+  },
+  "forecast": {
+    "txt_forecast": {
+      "date": "11:40 CEST",
+      "forecastday": [{
+        "period": 0,
+        "icon": "chancetstorms",
+        "icon_url": "http://icons.wxug.com/i/c/k/chancetstorms.gif",
+        "title": "mardi",
+        "fcttext": "Orages épars. Maximales : 71 ºF. Vents SSE soufflant de 5 à 10 mi/h. Risque de pluie : 50 %.",
+        "fcttext_metric": "Orages épars. Maximales : 22 ºC. Vents SSE soufflant de 10 à 15 km/h. Risque de pluie : 50 %.",
+        "pop": "50"
+      }, {
+        "period": 2,
+        "icon": "chancerain",
+        "icon_url": "http://icons.wxug.com/i/c/k/chancerain.gif",
+        "title": "mercredi",
+        "fcttext": "Averses. Risque d'orage. Maximales : 69 ºF. Vents E soufflant de 5 à 10 mi/h. Risque de pluie : 50 %.",
+        "fcttext_metric": "Averses. Risque d\u0027orage. Maximales : 21 ºC. Vents E soufflant de 10 à 15 km/h. Risque de pluie : 40 %.",
+        "pop": "50"
+      }, {
+        "period": 4,
+        "icon": "rain",
+        "icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+        "title": "jeudi",
+        "fcttext": "Pluie. Maximales : 69 ºF. Vents NO soufflant de 5 à 10 mi/h. Risque de pluie : 80 %. Environ ~ 0.25 po de pluie.",
+        "fcttext_metric": "Pluie. Maximales : 21 ºC. Vents NO et variables. Risque de pluie : 80 %. Environ ~ 6 mm de pluie.",
+        "pop": "80"
+      }, {
+        "period": 6,
+        "icon": "tstorms",
+        "icon_url": "http://icons.wxug.com/i/c/k/tstorms.gif",
+        "title": "vendredi",
+        "fcttext": "Orages. Maximales : 73 ºF. Vents N soufflant de 10 à 15 mi/h. Risque de pluie : 80 %.",
+        "fcttext_metric": "Orages. Maximales : 23 ºC. Vents N soufflant de 15 à 25 km/h. Risque de pluie : 80 %.",
+        "pop": "80"
+      }]
+    }
+  }
+}
